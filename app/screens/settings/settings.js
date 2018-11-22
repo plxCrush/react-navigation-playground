@@ -14,10 +14,16 @@ export class Settings extends React.Component {
     render = () => (
         <View style={styles.root}>
             <Text>Settings!</Text>
+
             <Button title="Edit Profile"
                     onPress={this.goToEditProfile}/>
+
             <Button title="Change Password"
                     onPress={this.goToChangePassword}/>
+
+            <Button title="Test Back"
+                    color="red"
+                    onPress={() => this.props.navigation.goBack()}/>
         </View>
     )
 }

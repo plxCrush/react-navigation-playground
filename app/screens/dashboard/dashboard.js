@@ -21,9 +21,12 @@ export class Dashboard extends React.Component {
     render = () => (
         <View style={styles.root}>
             <Text>Dashboard!</Text>
+
             <Button title="Logout"
                     onPress={this.logout}/>
+
             <Button title="Test Back"
+                    color="red"
                     onPress={() => this.props.navigation.goBack()}/>
         </View>
     )
