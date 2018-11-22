@@ -20,14 +20,15 @@ export class Login extends React.Component {
 
     goToSettings = () => {
 
-        // reset root stack, then navigate to Settings Tab.
         const toSettings = StackActions.reset({
-            index: 0,
-            actions: [NavigationActions.navigate({routeName: "App"})],
-            key: null
+            index: 1,
+            actions: [
+                NavigationActions.navigate({routeName: "App"}),
+                this.props.navigation.navigate("Settings")
+            ],
+            key: "App"
         });
         this.props.navigation.dispatch(toSettings);
-        this.props.navigation.navigate("Settings");
     };
 
     goToSignUp = () => this.props.navigation.navigate("SignUp");
